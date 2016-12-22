@@ -21,6 +21,13 @@ router.get('/position/:id', function(req, res, next) {
   })
 })
 
+router.put('/update/:id', function(req, res, next) {
+  coordsSchema.update({deviceID: req.params.id}, { $set: { longtitude: -6.6 }}, function(err, pos) {
+    if (err) return next(err);
+    return res.json("everything's fine");
+    })
+})
+
 router.post('/newCoord/:id/:lat/:lng', function(req, res, next) {
   var coordinate;
   coordinate = new coordsSchema({
@@ -36,6 +43,13 @@ router.post('/newCoord/:id/:lat/:lng', function(req, res, next) {
     }
   });
   return res.json({coordinate: coordinate});
+})
+
+router.delete('/deleteterminal/:id', function(req, res, next) {
+  coordsSchema.remove( { deviceID: req.params.id }, function(err) {
+    if (err) return next(err);
+    return res.json("deleed");
+  })
 })
 
 module.exports = router;
