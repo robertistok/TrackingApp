@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class TerminalList extends React.Component {
   render() {
-    const { fetchTerminals, terminalsList, currentID, handleChange } = this.props;
+    const {terminalsList, currentID, handleChange } = this.props;
     return(
       <div className="form-group">
         <label htmlFor='terminalID'>Select a terminal</label>

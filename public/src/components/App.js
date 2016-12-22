@@ -7,7 +7,6 @@ export default class App extends React.Component {
 
   componentDidMount() {
     document.body.style.backgroundColor = "#F4F4F4"
-
   }
 
   render() {
