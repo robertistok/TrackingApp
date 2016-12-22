@@ -9,7 +9,7 @@ import TerminalStatus from './TerminalStatus';
 
 export default class Form extends React.Component {
   componentWillMount() {
-    this.props.getTerminals();
+    this.props.getTerminals();\fuckyuyouytuytu
   }
 
   render() {
