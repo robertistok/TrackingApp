@@ -10,6 +10,7 @@ import TerminalStatus from './TerminalStatus';
 export default class Form extends React.Component {
   componentWillMount() {
     this.props.getTerminals();
+    console.log("hello from the other side")
   }
 
   render() {
